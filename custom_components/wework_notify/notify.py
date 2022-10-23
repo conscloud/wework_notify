@@ -115,11 +115,7 @@ class WeWorkNotificationService(BaseNotificationService):
             content += message
             msg = {"content": content}
         elif msgtype == "markdown":
-            content = ""
-            if title is not None:
-                content +=f"#{title}\n"
-            content += message
-            msg = {"content": content}
+            msg = {"content": message}
         elif msgtype == "textcard":
             msg = {"title": title, "description": message, "url": url}
         elif msgtype == "news":
